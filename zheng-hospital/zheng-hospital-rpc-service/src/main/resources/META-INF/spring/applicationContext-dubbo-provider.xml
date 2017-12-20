@@ -19,6 +19,9 @@
     <bean id="chcCommunityHsplServiceImpl" class="com.zheng.hospital.rpc.service.impl.ChcCommunityHsplServiceImpl"/>
     <dubbo:service interface="com.zheng.hospital.rpc.api.ChcCommunityHsplService" ref="chcCommunityHsplServiceImpl" timeout="10000"/>
 
+    <bean id="chcHospitalServiceImpl" class="com.zheng.hospital.rpc.service.impl.ChcHospitalServiceImpl"/>
+    <dubbo:service interface="com.zheng.hospital.rpc.api.ChcHospitalService" ref="chcHospitalServiceImpl" timeout="10000"/>
+
     <!-- 社区医院 -->
     <bean id="chcCorpInfoServiceImpl" class="com.zheng.hospital.rpc.service.impl.ChcCorpInfoServiceImpl"/>
     <dubbo:service interface="com.zheng.hospital.rpc.api.ChcCorpInfoService" ref="chcCorpInfoServiceImpl" timeout="10000"/>

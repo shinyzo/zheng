@@ -12,15 +12,15 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>文章管理</title>
+	<title>医院管理</title>
 	<jsp:include page="/resources/inc/head.jsp" flush="true"/>
 </head>
 <body>
 <div id="main">
 	<div id="toolbar">
-		<shiro:hasPermission name="cms:article:create"><a class="waves-effect waves-button" href="javascript:;" onclick="createAction()"><i class="zmdi zmdi-plus"></i> 新增文章</a></shiro:hasPermission>
-		<shiro:hasPermission name="cms:article:update"><a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 编辑文章</a></shiro:hasPermission>
-		<shiro:hasPermission name="cms:article:delete"><a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除文章</a></shiro:hasPermission>
+		<shiro:hasPermission name="cms:hospital:create"><a class="waves-effect waves-button" href="javascript:;" onclick="createAction()"><i class="zmdi zmdi-plus"></i> 新增文章</a></shiro:hasPermission>
+		<shiro:hasPermission name="cms:hospital:update"><a class="waves-effect waves-button" href="javascript:;" onclick="updateAction()"><i class="zmdi zmdi-edit"></i> 编辑文章</a></shiro:hasPermission>
+		<shiro:hasPermission name="cms:hospital:delete"><a class="waves-effect waves-button" href="javascript:;" onclick="deleteAction()"><i class="zmdi zmdi-close"></i> 删除文章</a></shiro:hasPermission>
 	</div>
 	<table id="table"></table>
 </div>
@@ -30,7 +30,7 @@ var $table = $('#table');
 $(function() {
 	// bootstrap table初始化
 	$table.bootstrapTable({
-		url: '${basePath}/manage/article/list',
+		url: '${basePath}/manage/hospital/list',
 		height: getHeight(),
 		striped: true,
 		search: true,
@@ -47,24 +47,15 @@ $(function() {
 		smartDisplay: false,
 		escape: true,
 		searchOnEnterKey: true,
-		idField: 'articleId',
-		sortName: 'orders',
+		idField: 'hospital_id',
+		sortName: 'hospital_id',
         sortOrder: 'desc',
 		maintainSelected: true,
 		toolbar: '#toolbar',
 		columns: [
 			{field: 'ck', checkbox: true},
-			{field: 'articleId', title: '编号', sortable: true, align: 'center'},
-			{field: 'systemId', title: '所属系统'},
-			{field: 'topicId', title: '所属专题'},
-			{field: 'title', title: '标题'},
-			{field: 'author', title: '作者'},
-			{field: 'description', title: '描述'},
-			{field: 'type', title: '类型', sortable: true, align: 'center', formatter: 'typeFormatter'},
-			{field: 'status', title: '审核', sortable: true, align: 'center', formatter: 'statusFormatter'},
-			{field: 'readnumber', title: '阅读量'},
-			{field: 'ctime', title: '创建时间', formatter: 'timeFormatter'},
-			{field: 'action', title: '操作', align: 'center', formatter: 'actionFormatter', events: 'actionEvents', clickToSelect: false}
+			{field: 'hospitalId', title: '医院编号', sortable: true, align: 'center'},
+			{field: 'hospitalName', title: '医院名称'}
 		]
 	});
 });

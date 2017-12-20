@@ -24,6 +24,7 @@
             <groupId>com.zheng</groupId>
             <artifactId>zheng-hospital-common</artifactId>
             <version>1.0.0</version>
+            <type>jar</type>
         </dependency>
     </dependencies>
 

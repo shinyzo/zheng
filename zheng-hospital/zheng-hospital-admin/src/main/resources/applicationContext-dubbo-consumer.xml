@@ -14,7 +14,7 @@
     <!-- 订阅服务 -->
     <dubbo:consumer check="false"/>
 
-    <!-- 文章 -->
+    <!-- 医院 -->
     <dubbo:reference id="chcHospitalService" interface="com.zheng.hospital.rpc.api.ChcHospitalService" mock="true"/>
 
 

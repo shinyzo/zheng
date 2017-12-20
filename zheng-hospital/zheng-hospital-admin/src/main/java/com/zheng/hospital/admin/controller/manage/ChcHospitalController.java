@@ -32,8 +32,8 @@ import java.util.Map;
  * Created by shuzheng on 2016/11/14.
  */
 @Controller
-@Api(value = "文章管理", description = "文章管理")
-@RequestMapping("/manage/article")
+@Api(value = "医院管理", description = "医院管理")
+@RequestMapping("/manage/hospital")
 public class ChcHospitalController extends BaseController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ChcHospitalController.class);
@@ -44,14 +44,14 @@ public class ChcHospitalController extends BaseController {
 
 
 	@ApiOperation(value = "医院首页")
-	@RequiresPermissions("cms:hospital:read")
+	@RequiresPermissions("chc:hospital:read")
 	@RequestMapping(value = "/index", method = RequestMethod.GET)
 	public String index() {
 		return "/manage/hospital/index.jsp";
 	}
 
 	@ApiOperation(value = "医院列表")
-	@RequiresPermissions("cms:hospital:read")
+	@RequiresPermissions("chc:hospital:read")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	@ResponseBody
 	public Object list(

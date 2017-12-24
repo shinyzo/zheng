@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd ">
+
+    <dubbo:application name="zheng-hospital-app-service"/>
+
+    <dubbo:registry file="./zheng-hospital-app-service-dubbo.cache" address="zookeeper://zkserver:2181"/>
+
+    <!-- 订阅服务 -->
+    <dubbo:consumer check="false"/>
+
+    <!-- 医院 -->
+    <dubbo:reference id="chcHospitalService" interface="com.zheng.hospital.rpc.api.ChcHospitalService" mock="true"/>
+    <!-- 医生 -->
+    <dubbo:reference id="chcDoctorInfoService" interface="com.zheng.hospital.rpc.api.ChcDoctorInfoService" mock="true"/>
+
+    <!-- upms 用户 -->
+    <dubbo:reference id="upmsUserService" interface="com.zheng.upms.rpc.api.UpmsUserService" mock="true"/>
+
+
+</beans>

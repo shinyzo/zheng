@@ -183,7 +183,7 @@ public class ChcDoctorInfo implements Serializable {
      *
      * @mbg.generated
      */
-    private String desc;
+    private String description;
 
     private Float score;
 
@@ -409,12 +409,12 @@ public class ChcDoctorInfo implements Serializable {
         this.inputType = inputType;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getDescription() {
+        return description;
     }
 
-    public void setDesc(String desc) {
-        this.desc = desc;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Float getScore() {
@@ -474,7 +474,7 @@ public class ChcDoctorInfo implements Serializable {
         sb.append(", personalPhone=").append(personalPhone);
         sb.append(", status=").append(status);
         sb.append(", inputType=").append(inputType);
-        sb.append(", desc=").append(desc);
+        sb.append(", description=").append(description);
         sb.append(", score=").append(score);
         sb.append(", createTime=").append(createTime);
         sb.append(", updateTime=").append(updateTime);
@@ -521,7 +521,7 @@ public class ChcDoctorInfo implements Serializable {
             && (this.getPersonalPhone() == null ? other.getPersonalPhone() == null : this.getPersonalPhone().equals(other.getPersonalPhone()))
             && (this.getStatus() == null ? other.getStatus() == null : this.getStatus().equals(other.getStatus()))
             && (this.getInputType() == null ? other.getInputType() == null : this.getInputType().equals(other.getInputType()))
-            && (this.getDesc() == null ? other.getDesc() == null : this.getDesc().equals(other.getDesc()))
+            && (this.getDescription() == null ? other.getDescription() == null : this.getDescription().equals(other.getDescription()))
             && (this.getScore() == null ? other.getScore() == null : this.getScore().equals(other.getScore()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
             && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()));
@@ -558,7 +558,7 @@ public class ChcDoctorInfo implements Serializable {
         result = prime * result + ((getPersonalPhone() == null) ? 0 : getPersonalPhone().hashCode());
         result = prime * result + ((getStatus() == null) ? 0 : getStatus().hashCode());
         result = prime * result + ((getInputType() == null) ? 0 : getInputType().hashCode());
-        result = prime * result + ((getDesc() == null) ? 0 : getDesc().hashCode());
+        result = prime * result + ((getDescription() == null) ? 0 : getDescription().hashCode());
         result = prime * result + ((getScore() == null) ? 0 : getScore().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         result = prime * result + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());

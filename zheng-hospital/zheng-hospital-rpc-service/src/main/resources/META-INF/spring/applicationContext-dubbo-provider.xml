@@ -26,5 +26,8 @@
     <bean id="chcCorpInfoServiceImpl" class="com.zheng.hospital.rpc.service.impl.ChcCorpInfoServiceImpl"/>
     <dubbo:service interface="com.zheng.hospital.rpc.api.ChcCorpInfoService" ref="chcCorpInfoServiceImpl" timeout="10000"/>
 
+    <bean id="chcDoctorInfoServiceImpl" class="com.zheng.hospital.rpc.service.impl.ChcDoctorInfoServiceImpl"/>
+    <dubbo:service interface="com.zheng.hospital.rpc.api.ChcDoctorInfoService" ref="chcDoctorInfoServiceImpl" timeout="10000"/>
+
 
 </beans>

@@ -17,6 +17,7 @@
         <module>zheng-hospital-rpc-service</module>
         <module>zheng-hospital-common</module>
         <module>zheng-hospital-admin</module>
+        <module>zheng-hospital-app-service</module>
     </modules>
 
     <dependencyManagement>
@@ -49,6 +50,13 @@
                 <groupId>javax.servlet</groupId>
                 <artifactId>jstl</artifactId>
                 <version>1.2</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.16.18</version>
+                <scope>provided</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
